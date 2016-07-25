@@ -1,4 +1,8 @@
-<div class="row fstRow">
+<!-- Right side of dashboard -->
+ <div class="row rightTitle">
+     <h1>Operating Hours</h1>
+ </div>
+  <div class="row fstRow">
    <div ng-repeat="day in data.days" class="col-md-2 col-md-offset-2 dash">
     <div class="col-md-12 inner">
               <div class="row dashTitle">
@@ -6,7 +10,7 @@
               </div>
               <div class="row times">
                   <div ng-repeat="time in day.times" class="row selection">
-                  <p>{{time.open}} - {{time.close}}</p>
+                  <p>{{time.open | date: "hh:mma"}} - {{time.close | date: "hh:mma"}}</p>
                   </div>
       
                   
@@ -14,92 +18,4 @@
     </div>
 </div>
 </div>
-     <!-- <div class="row fstRow">
-     <div class="col-md-2 col-md-offset-2 dash">
-             <div class="col-md-12 inner">
-              <div class="row dashTitle">
-                  <h4>Monday</h4>
-              </div>
-              <div class="row times">
-                  <div class="row selection">
-                      <p>8:00AM - 5:00PM</p>
-                  </div>
-                  
-                  
-              </div>
-              
-          </div>
-          </div>
-          
-          
-        <div class="col-md-2 dash"><div class="col-md-12 inner">              <div class="row dashTitle">
-                  <h4>Tuesday</h4>
-              </div>
-              <div class="row times">
-                  <div class="row selection">
-                      <p>8:00AM - 5:00PM</p>
-                  </div>
-                  
-                  
-              </div></div></div>
-          
-        <div class="col-md-2 dash"><div class="col-md-12 inner">              <div class="row dashTitle">
-                  <h4>Wednesday</h4>
-              </div>
-              <div class="row times">
-                  <div class="row selection">
-                      <p>8:00AM - 5:00PM</p>
-                  </div>
-                  
-                  
-              </div></div></div>
-          
-      <div class="col-md-2 dash"><div class="col-md-12 inner">              <div class="row dashTitle">
-                  <h4>Thursday</h4>
-              </div>
-              <div class="row times">
-                  <div class="row selection">
-                      <p>8:00AM - 5:00PM</p>
-                  </div>
-                  
-                  
-              </div></div></div>
-
-          
-      </div>
-           Second Row
-      <div class="row secRow">
-          <div class="col-md-2 col-md-offset-3 dash"><div class="col-md-12 inner">              <div class="row dashTitle">
-                  <h4>Friday</h4>
-              </div>
-              <div class="row times">
-                  <div class="row selection">
-                      <p>8:00AM - 5:00PM</p>
-                  </div>
-                  
-                  
-              </div></div></div>
-          
-          <div class="col-md-2 dash"><div class="col-md-12 inner">             <div class="row dashTitle">
-                  <h4>Saturday</h4>
-              </div>
-              <div class="row times">
-                  <div class="row selection">
-                      <p>8:00AM - 5:00PM</p>
-                  </div>
-                  
-                  
-              </div></div></div>
-          
-          <div class="col-md-2 dash"><div class="col-md-12 inner">              <div class="row dashTitle">
-                  <h4>Sunday</h4>
-              </div>
-              <div class="row times">
-                  <div class="row selection">
-                      <p>8:00AM - 5:00PM</p>
-                  </div>
-                  
-                  
-              </div></div></div>
-                    
-      </div>-->
+    

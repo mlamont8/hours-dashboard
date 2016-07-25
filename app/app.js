@@ -18,12 +18,6 @@ app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider,
             //sidebar
             'sidebar@home': {templateUrl: '/shared/sidebar/sidebar.html'},
                                    
-/*                                    $scope.days = ['MONDAY','TUESDAY','WEDNESDAY','THURSDAY','FRIDAY','SATURDAY','SUNDAY'];
-                $scope.hours = {};
-                
-                $scope.
-                                }},*/
-
             
             // right view
             'right@home': {templateUrl: 'components/right/right.html'}
@@ -33,75 +27,83 @@ app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider,
     });
 }
             
-            ]);
+            ]); /*closes config()*/  
 
-/*closes config()*/    
+  
  app.controller('mainController', function($scope){
   
+     /*Starter Data*/
      $scope.data = {
          "days": [{
              "name": "monday",
              'times': [{
-                 "open": '9:00AM',
-                 "close": '1200'}, {
-                     "open": '1300',
-                     "close": '1700'}]
+                 "open": '1970-01-01T14:00:00.000Z',
+                 "close": '1970-01-01T17:00:00.000Z'}, {
+                     "open": '1970-01-01T18:00:00.000Z',
+                     "close": '1970-01-01T22:00:00.000Z'}]
          } , {
              "name": "tuesday",
              'times': [{
-                 "open": '900',
-                 "close": '1200'}, {
-                     "open": '1300',
-                     "close": '1700'}],
+                 "open": '1970-01-01T14:00:00.000Z',
+                 "close": '1970-01-01T17:00:00.000Z'}, {
+                     "open": '1970-01-01T18:00:00.000Z',
+                     "close": '1970-01-01T22:00:00.000Z'}],
          }, {
              "name": "wednesday",
              'times': [{
-                 "open": '900',
-                 "close": '1200'}, {
-                     "open": '1300',
-                     "close": '1700'}],
+                 "open": '1970-01-01T14:00:00.000Z',
+                 "close": '1970-01-01T17:00:00.000Z'}, {
+                     "open": '1970-01-01T18:00:00.000Z',
+                     "close": '1970-01-01T22:00:00.000Z'}],
          }, {
              "name": "thursday",
              'times': [{
-                 "open": '900',
-                 "close": '1200'}, {
-                     "open": '1300',
-                     "close": '1700'}],
+                 "open": '1970-01-01T14:00:00.000Z',
+                 "close": '1970-01-01T17:00:00.000Z'}, {
+                     "open": '1970-01-01T18:00:00.000Z',
+                     "close": '1970-01-01T22:00:00.000Z'}],
          }, {
              "name": "friday",
              'times': [{
-                 "open": '900',
-                 "close": '1200'}, {
-                     "open": '1300',
-                     "close": '1700'}],
+                 "open": '1970-01-01T14:00:00.000Z',
+                 "close": '1970-01-01T17:00:00.000Z'}, {
+                     "open": '1970-01-01T18:00:00.000Z',
+                     "close": '1970-01-01T22:00:00.000Z'}],
          }, {
              "name": "saturday",
              'times': [{
-                 "open": '900',
-                 "close": '1200'}, {
-                     "open": '1300',
-                     "close": '1700'}],
+                 "open": '1970-01-01T14:00:00.000Z',
+                 "close": '1970-01-01T17:00:00.000Z'}, {
+                     "open": '1970-01-01T18:00:00.000Z',
+                     "close": '1970-01-01T22:00:00.000Z'}],
          }, {
              "name": "sunday",
              'times': [{
-                 "open": '900',
-                 "close": '1200'}, {
-                     "open": '1300',
-                     "close": '1700'}],
+                 "open": '1970-01-01T14:00:00.000Z',
+                 "close": '1970-01-01T17:00:00.000Z'}, {
+                     "open": '1970-01-01T18:00:00.000Z',
+                     "close": '1970-01-01T22:00:00.000Z'}],
          }]
               
           };
-$scope.text={};
+     $scope.text={};
      $scope.text2={};
+     
+     /*function to add times*/
      $scope.addTimes = function(day){
+         var open = $scope.text.open;
+         var close = $scope.text2.close;
+         /*check if close date is after open date*/
+         if (close < open){
+             console.log("error");
+         }else{
         day.times.push({
-           "open": $scope.text.open, "close": $scope.text2.close}
+           "open": open, "close": close}
                       );
-         console.log($scope.open);
        $scope.text.open = '';
     $scope.text2.close = '';
-     };
+     }
 
-     
+     };
  });
       
