@@ -1,0 +1,60 @@
+body {
+  background-color: #2c3e50;
+    color: #ecf0f1;
+}
+.navbar {
+    background-color: #3498db;
+    border: none;
+     
+}
+.navbar-default .navbar-brand, .navbar-default .navbar-text{
+     color: #ecf0f1;
+}
+.leftCol {
+  height:100vh;
+        overflow-y: scroll;
+
+    
+}
+
+.rightCol {
+    height: 100vh;
+    font-size: 12px;
+}
+.day {
+    min-height: 200px;
+    background-color: #3498db;
+    border-radius: 10px;
+}
+
+.title, .submit {
+    text-align:center;
+}
+
+.form-inline, .submit {
+    padding-top: 20px;
+}
+.fstRow, .secRow{
+    text-align: center;
+    min-height: 175px;
+    padding-top: 100px;
+}
+.dash{
+
+    min-height:inherit;
+    min-width: 100px;
+    border: 30px;
+    padding: 0 5px 20px 5px;
+}
+.inner{ 
+    text-align: center;
+    background-color: #3498db;
+    min-height:inherit;
+    border-radius: 5px; 
+}
+.dashRow{
+    background-color: #3498db;
+    height: 60px;
+    margin-bottom: 10px;
+}
+

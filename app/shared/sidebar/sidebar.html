@@ -1,0 +1,37 @@
+<!--sidebar column-->   
+           <div ng-repeat="day in data.days" class="day">
+              <div class="title"><h1>{{day.name | uppercase}}</h1></div>
+              <!--myadd -->
+                 
+             
+              <!--end-->
+          <!--<div class="hours">
+          <form class="form-inline">
+              <div class="form-group">
+              <label>OPEN</label>
+              <input type="text" class="form-control monin" ng-model="day.time.open">
+              
+            <label>CLOSE</label>
+            <input type="text" class="form-control monout" ng-model="day.time.close">
+            </div>
+            
+          </div>-->
+          
+       <!--   <div class="submit">
+              <button ng-click="MyFunc()" type="submit" value="Submit"></button>
+         <!-- </div> 
+           </form>    
+          </div>-->
+    <div class="hours">     
+    <form ng-submit="addTimes(day)" class="form-inline">
+    <div class="form-group">
+    <div class="row">
+    <input ng-model="text.open" type="text" class="f" placeholder="Open">
+    <input ng-model="text2.close" type="text" class="f" placeholder="Close">
+    </div>
+    <input type="submit">
+    </div>
+</form>
+</div>
+<p>{{myTxt}}</p>
+   

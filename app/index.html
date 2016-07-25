@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+ <html> 
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>OPEN HOURS</title>
+  <meta name="An interface to update operating hours for a shop owner" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- Bootstrap -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- normalize -->
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+<!--App CSS File-->
+  <link rel="stylesheet" href="app.css">
+
+</head>
+<body ng-app="app" ng-controller="mainController">
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+
+      <a class="navbar-brand">EZFloral</a>
+      <p class="navbar-text">Operating Hours</p>
+  
+
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="container">
+ 
+   <div ui-view></div>
+    
+</div>
+
+
+
+<!-- jQuery -->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<!-- jQuery UI-->
+<!--<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">-->
+<link rel="stylesheet" href="bower_components/jquery-ui/themes/smoothness/jquery-ui.css">
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>-->
+<script src="bower_components/jquery-ui/jquery-ui.js"></script>
+
+<!-- Angular -->
+<!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>-->
+<script src="bower_components/angular/angular.js"></script>
+ <!-- UI Router -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>-->
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script src="app.js"></script>
+
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+ 
+  
+</body>
+</html>
